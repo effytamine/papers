@@ -1,2 +1,3 @@
 # papers
-mathematical papers
+documentation and expositions
+
