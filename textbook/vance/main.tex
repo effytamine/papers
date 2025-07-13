@@ -1,0 +1,202 @@
+\documentclass{article}
+
+% Packages
+\usepackage{graphicx} %  was not used here
+\usepackage{amsmath} % american math society symbols, notations
+\usepackage{amsfonts} % addon to ams
+\usepackage{mathtools} % more notations
+\usepackage[margin=1in]{geometry} % page marhin
+\usepackage{fancyhdr} % layout and design
+\usepackage{enumerate} % was not used
+\usepackage[shortlabels]{enumitem} % was not used
+\usepackage[makeroom]{cancel} % cleaner strikethrough
+
+% typeset preferences
+\newcommand{\paren}[1]{\mathopen{}\left( {#1}_{{}_{}}\,\negthickspace\right)\mathclose{}} % auto-scale parentheses including nested
+\newcommand{\bracket}[1]{\mathopen{}\left[ {#1}_{{}_{}}\,\negthickspace\right]\mathclose{}} % auto-scale brackets including nested
+
+% formatting
+\pagestyle{fancy}
+\fancyhead[l]{Sean Russell Villeza}
+\fancyhead[c]{Section 2-4, Modern College Algebra by Vance}
+\fancyhead[r]{\today}
+\fancyfoot[r]{\today}
+\renewcommand{\headrulewidth}{0.2pt}
+\setlength{\headheight}{15pt} %Sets enough space for the header
+\allowdisplaybreaks
+
+% begin 
+\begin{document}
+
+\section{Introduction}
+
+This paper serves as a compilation for expositions on the problems presented in section
+2-4 of the book Modern College Algebra by Vance. The answers are written loosely 
+and note-like.
+
+\section{Problems}
+
+Let us recall the definition of the \emph{axiom 6A} , the existence of additive 
+inverses. The axiom states that;
+
+\[
+    \forall a \in \mathbb{Z}, \exists !x \left( a + x = 0\right)
+\]
+
+and that x is a unique solution to that equation denoted as -a for any a in the
+ same definition (that is, \(\left(a + (-a) = 0\right)\)). We also take note of the \emph{theorem 2-12} which states; 
+
+\[
+    \forall a, \forall c \paren{ ac =  0 \to (a= 0 )\lor(c = 0)}
+\] 
+
+With these axioms in mind, the statement that 0 is the additive inverse of itself is 
+true. Not only is it's existence justified by the additive identity, but also 
+logically, the implication is satisfied for \(0 + x = 0\) where the unique 
+solution \(x = 0\) is determined to be true. A more rigorous proof comes from 
+deriving an equation by the axiom that is the addition for equality. It turns 
+\(a = -a\) to \(a +a = 0\) by addition for equality, then by the distributive 
+axiom \(a(1 + 1)  =0\) to be \(2a = 0\). By theorem 2-12 we deduce \(a = 0\).
+
+Section 2-4 introduces \emph{multiplicative inverses}, that is more commonly known as its
+own separate operation called \emph{division}. This produces new interactions and parallels
+with the additive inverse and related axioms that take the form of a separate operation called 
+called \emph{subtraction}. Particularly in identifying solutions that come out of shifting and
+scaling in the real number line. The anatomy of a multiplication expression is defined as;
+\[
+    \forall a, b, c \in \mathbb{Z} \left(ab = c \right)
+\]
+\begin{center}
+    where a and b are determined to be factors of c, and c is a multiple of a and b.
+\end{center}
+
+More complex factors are now available to be expressed such as the product of sums. Their solutions vary
+depending on the internal structure of the sum. For instance, let us take \( (a+1)(a-1) = 0\) that is
+the product of a + 1 and a - 1, particularly simplify its form. Using the
+distributive axiom of multiplication over addition, the commutative and associative
+axioms for addition and multiplication; 
+\begin{align*}
+    a\paren{a-1} + 1\paren{a-1} \\
+    \paren{\paren{a}\paren{a} - \paren{a}\paren{1}} + \paren{\paren{1}\paren{a} - \paren{1}\paren{1}} \\
+    (a)(a) + (-a)(1) + (1)(a) + (-1)(1) \\ 
+    (a)(a) + \paren{(-a)(1) + (1)(a)} + (-1)(1) \\ 
+    (a)(a) + \paren{(1)(a + (-a))} + (-1)(1) \\ 
+    (a)(a) + \paren{(1)(0)} + (-1)(1) \\ 
+    (a)(a) + (0) + (-1)(1) \\
+    (a)(a) + (-1)(1) \\
+    (a)(a) -1 \\ 
+    (a)(a) \coloneqq a^2 \\
+     a^2 - 1  
+\end{align*}
+This provides the notation we use for factors that are equal to each other, that is 
+the \emph{power} notation, \(\forall a \in \mathbb{R}\) that \(a \cdot x\) where 
+\(a = x\) is \(a^2\) or more generally;
+\[
+    a^n
+\]
+\begin{center}
+    where n is the amount of factors equal to itself.
+\end{center}
+
+The product of sums in the form \((a^2 - b^2)\) from above is a special type of product 
+known as the \emph{difference of squares}. By turning the expression into an equation equal to
+0, we define a task to determine its solutions or \emph{roots}. In the context of factors, we manipulate 
+the equation to give us what makes each factor collapse to 0, or literally equal to 0;
+\begin{align*}
+    \paren{a^2 - 1} &= 0 \\ 
+    \paren{a+1} \paren{a-1} &= 0 
+\end{align*}
+\[
+\begin{array}{rl@{\qquad}rl}
+    \paren{a+1} &= 0 & \paren{a-1} &= 0 \\
+    a + 1 &= 0 & a - 1 &= 0 \\ 
+    a &= -1 & a &= 1 
+\end{array}
+\]
+\begin{center}
+    The solution to the difference of squares that is \((a^2-1) \text{ is } a =\{1, -1\}\). 
+\end{center}
+
+Finding solutions to expressions involving product of sums can be done using an array of methods. The method
+used previously is called \emph{factoring}. This introduces a plethora of inquiry especially in this section
+concerned with introduction to division. For example the proposition \(\exists a \in \mathbb{R} \paren{(ax = 1) \land (a = x)}\)
+, that states it is true there is a number \(a\) that is, it is the multiplicative inverse of itself. Using algebraic 
+manipulations we find that using that;
+\begin{align*}
+    ax &= 1 \\
+    a &= x \\
+    a \cdot a &\coloneqq a^2 \\
+    a^2 - 1 &= 0 \\ 
+    \text{by factorization; } a &= \{1, -1\} 
+\end{align*}
+this is a fundamental result in algebra. Just like how addition and subtraction has a special relationship
+with 0. 0 is a number that is its own additive inverse -- a fact guaranteed by the additive identity axiom. 
+On the other hand, we see a special relationship in multiplication and division, that is,
+there exists a number that is its own multiplicative inverse. However unlike the two former operations,
+multiplication admits to \emph{two} such integers, 1 and -1.  
+
+It is clear there are parellels existing between addition and subtraction, and division and multiplication. 
+In addition to notable differences previously. This prompts us to look at the behavior of each 
+axiom towards division. Addition and multiplication possess the commutative and associative axiom. Subtraction 
+and division cannot possess these axioms since these operations themselves are born out of different axioms. 
+Commutativity axiom states that;
+\begin{align*}
+    \forall a, b \in \mathbb{R} (a\cdot b = b \cdot a) \text{ for multiplication; } \\
+    \forall a, b \in \mathbb{R} (a + b = b + a) \text{ for addition; } 
+\end{align*} 
+While the associative axiom states that;
+\begin{align*}
+    \forall a, b, c \in \mathbb{R} \paren{(a\cdot b) \cdot c = a \cdot (b \cdot c)} \text{ for multiplication; } \\
+    \forall a, b, c \in \mathbb{R} \paren{(a + b) + c = a + (b + c)} \text{ for addition; } 
+\end{align*} 
+The restrictions come particularly, in the order and grouping in which the inverses affect the final result. 
+Division and subtraction themselves are by concept, just convenient notations for additive and multiplicative inverses. This is a concept
+stressed about in fundamental college algebra. To show that division is not commutative is to prove that
+\[
+    \exists a,b \in \mathbb {Q}\paren{\frac{a}{b}\neq\frac{b}{a}}
+\]
+\begin{center}
+    For \(\mathbb{Q}\) is the minimum viable number system that satisfies multiplicative inverses.
+\end{center}
+\begin{align*}
+    \frac{a}{b} &= \frac{b}{a} \\
+    \frac{a}{b} - \frac{b}{a} &= 0\\
+    \frac{(a)(a) - (b)(b)}{ab} &= 0 \\
+    \frac{a^2- b^2}{ab} &= 0 \\
+    \cancel{(ab)}\frac{a^2- b^2}{\cancel{ab}} &= 0 (ab)\\
+    a^2-b^2 &= 0
+\end{align*}
+\begin{center}
+    by factorization; \((a+b)(a-b)\), that is \((a = b) \lor (b = -a)\). 
+\end{center}
+
+It shows the only two instances where commutativity in division is true. Only when a is equal to b
+or when one is the additive inverse of each other, those that yield 0. It is sufficient to say that 
+if there are only two distinct instances where commutativity in division is true, then all other cases
+must render commutativity false, the negated proposition from above that has a similar truth value;
+\[
+    \forall a,b \in \mathbb{Q}\paren{\frac{a}{b} = \frac{b}{a}} 
+\]
+is proven false. Therefore division is not commutative. 
+
+Similarly with the associativity axiom, in order to prove that division is not associative we have to
+show that;
+\[ 
+    \exists a, b, c \in \mathbb{Q} \paren{\frac{\frac{a}{b}}{c} \neq \frac{a}{\frac{b}{c}}}
+\]
+\begin{align*}
+    \paren{\frac{b}{c}}\paren{\frac{\frac{a}{b}}{c}} &= \paren{\frac{a}{\cancel{\frac{b}{c}}}} \paren{\cancel{\frac{b}{c}}} \\
+    \paren{\cancel{c}}\paren{\frac{\paren{\frac{b}{c}}\paren{\frac{a}{b}}}{\cancel{c}}} &= (a)(c) \\
+    \paren{\frac{\cancel{b}}{c}} \paren{\frac{a}{\cancel{b}}} &= ac \\
+    \paren{\cancel{c}} \paren{\frac{a}{\cancel{c}}} &= \paren{ac} \paren{c} \\
+    \paren{\frac{1}{\cancel{a}}} \paren{\cancel{a}} &= c^2 \\
+    0 &= c^2 - 1
+\end{align*}
+\begin{center}
+    by factorization; \((c+1)(c-1)\), that is \((c = 1) \lor (c = -1)\). 
+\end{center}
+
+Similar to proving that division is not commutative, it states that division only satisfies the 
+associative axiom whenever c = 1 or -1. Hence for all other \(a, b, c \in \mathbb{Q}\) where c \(\neq\) 1 or -1, the 
+proposition to show earlier, is true.
+\end{document}
